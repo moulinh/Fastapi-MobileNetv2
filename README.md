@@ -1,4 +1,4 @@
-# ML & DL API — FastAPI DINOv2
+# ML & DL API — FastAPI MobileNetV2
 
 API REST avec deux endpoints
 
