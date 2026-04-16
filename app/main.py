@@ -4,9 +4,9 @@ from app.models.text_model import load_text_model, predict_text
 from app.models.image_model import load_image_model, predict_image
 
 app = FastAPI(
-    title="ML & DL API",
-    description="Sentiment analysis (texte) et classification de domages sur voiture",
-    version="1.0.0",
+    title="ML & DL API avec MobileNetv2",
+    description="Detection de dommages carrosserie (texte) et classification de domages sur voiture (Image)",
+    version="1.0.2",
 )
 
 text_model = load_text_model()
@@ -14,7 +14,7 @@ image_model = load_image_model()
 
 @app.get("/health")
 def health():
-    return {"status": "ok : Version 9 du 08/04/2026"}
+    return {"status": "ok : Version 10 du 16/04/2026"}
 
 @app.post("/predict/text", response_model=TextResponse)
 def predict_text_route(request: TextRequest):
